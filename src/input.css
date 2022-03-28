@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.card{
+   @apply bg-white my-6 rounded-md  overflow-hidden  shadow-lg
+}
+.text{
+    @apply p-3 font-semibold flex flex-col
+}
+.form{
+    @apply mx-2 border-2 hover:bg-pink-600 hover:text-cyan-100 rounded-full py-1 px-2 sm:py-1 sm:px-4 border-pink-600
+}
+.move{
+    @apply -translate-y-40
+}

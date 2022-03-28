@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <title>Tailwind CSS</title>
+    <style>
+          
+        .item::after{
+        content: "";
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        background-color:black;
+        opacity: 0; 
+        
+
+    }
+
+    #icon{
+        transform: translate(-50% ,-50%);
+        opacity:0;
+
+        
+    }
+
+    .item:hover #icon{
+        opacity: 1;
+    }
+
+
+    .item:hover::after{
+      opacity: 0.8;
+    }
+    </style>
+</head>
+<body class="flex justify-center text-gray-600 h-screen";>
+<!--content wrapper-->
+    <div class="w-full flex flex-col md:grid md:grid-cols-4">   
+        <nav class="md:col-span-1">
+          <div class="py-1 px-1">
+              <!-- logo goes here -->
+               <div>
+                   <div class="flex justify-between items-center">
+                    <div class="font-bold font-sans font-sans sm:text-4xl text-2xl py-1 px-2">
+                        <h2 class="">FOO<span class="text-pink-700">DIEE </span>
+                        </h2>
+                      </div>
+    
+                        <div class="border-2 rounded flex items-center w-8 h-8 mr-3 border-slate-700 md:hidden" id="toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                       </div>
+                   </div>
+              <!-- nav list -->
+              <div class="items-end flex-col font-semibold my-2 md:flex transition-all ease-out duration-3000" id="menu-list">
+                <ul class="duration-3000 ease-out" >
+                    <li class="px-2 hover:border-red-100 border-r-4 border-red-600 flex justify-center  hover:bg-slate-300 h-12"><a href="#"  class="flex md:justify-around justify-center  my-2 mx-5 " >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg> <span class="ml-3">Home</span></a></li>
+                          <li class="px-2  flex justify-center hover:border-r-4 border-red-600 hover:bg-slate-300 h-12"><a href="#"  class="flex md:justify-around justify-center  my-2 mx-5 " ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg> <span class="ml-3">About</span></a></li>
+                      <li class="px-2 flex justify-center hover:border-r-4 border-red-600 hover:bg-slate-300 h-12"><a href="#"  class="flex md:justify-around justify-center  my-2 mx-5 " ><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg> <span class="ml-3">Contact</span></a></li>
+                </ul>
+                
+              </div> 
+               </div>
+               <!-- nav ends here -->
+              
+          </div>
+        </nav>
+
+        <main class="bg-gray-200 px-14 md:col-span-3 transition-all ease-in-out duration-6000s md:-translate-y-0 move" id="main">
+            <div class="flex md:justify-end justify-center py-4 px-1  font-semibold">
+                <span class="form hover:scale-110 transition flex ease-in-out delay-150 bg-pink-600 text-white"><a href="#" class="">Sign Up</a></span>
+                <span class=" flex form hover:scale-110 transition ease-in-out delay-150"><a href="#">Log in</a></span>
+            </div>
+          <h3 class="text-5xl  font-semibold my-4 pt-4">Recipes</h3>
+          <h3 class="text-2xl font-semibold border-b-2 border-pink-400 my-4">Nigerian Recipes</h3>
+
+
+          <div class="md:grid md:grid-cols-2 lg:grid-cols-3 sm:gap-1 md:gap-2 lg:gap-4 w-full "> 
+               <!-- card components goes here -->
+               <div class="card  hover:shadow-2xl relative  ">
+                  <div class="item relative"> 
+                      <div class="flex absolute top-2/4 left-1/2"  id="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg"  class="h-7 w-7 text-red-900" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                      </div>
+                    <img src="./img/curry.jpg" alt="food" class="w-full" >
+                  </div>
+                   <div class="text">
+                       <span class="text-black"> Sauced Curry Delicacy </span>
+                       <span  class="text-sm font-medium ">Recipe by Sazzy </span>
+                       <div class="absolute py-1 px-2 rounded full top-0 left-0 flex  bg-slate-400  text-gray-100 "><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg><p>Time taken</p></div>
+                        
+                   </div>
+               </div>
+
+               <div class="card hover:shadow-2xl ">
+                <img src="./img/curry.jpg" alt="food" class="w-full" >
+                <div class="text">
+                    <span> Sauced Curry Delicacy </span>
+                    <span class="text-sm font-medium">Offering your TasteBud the best treat</span>
+
+                </div>
+                <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+            </div>
+
+               <div class="card hover:shadow-2xl">
+                <img src="./img/noodles.jpg" alt="food" class="w-full">
+                <div class="text">
+                    <span> Sauced Curry Delicacy </span>
+                    <span class="text-sm font-medium">Recipe by Tessy</span>
+                    <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+                </div>
+            </div>
+            <div class="card hover:shadow-2xl">
+                <img src="./img/stew.jpg" alt="food"class="w-full" >
+                <div class="text">
+                    <span> Sauced Curry Delicacy </span>
+                    <span class="text-sm font-medium">Offering your TasteBud the best treat</span>
+                    <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+                </div>
+            </div>
+            <div class="card hover:shadow-2xl">
+                <img src="./img/stew.jpg" alt="food"class="w-full" >
+                <div class="text">
+                    <span> Sauced Curry Delicacy </span>
+                    <span class="text-sm font-medium">Recipe by Sars</span>
+                    <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+                </div>
+            </div>
+            <div class="card hover:shadow-2xl">
+                <img src="./img/stew.jpg" alt="food"class="w-full" >
+                <div class="text">
+                    <span> Sauced Curry Delicacy </span>
+                    <span class="text-sm font-medium">Offering your TasteBud the best treat</span>
+                    <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+                </div>
+            </div>
+          </div>
+          <div>
+              
+            <h3 class="font-semibold">Latest Recipes
+            </h3>
+            <!-- card  2 goes here-->
+            <div class="md:grid md:grid-cols-2 lg:grid-cols-3 sm:gap-1 md:gap-2 lg:gap-4 w-full ">
+                <div class="card hover:shadow-2xl">
+                    <img src="./img/curry.jpg" alt="food" class="w-full" >
+                    <div class="text">
+                        <span> Sauced Curry Delicacy </span>
+                        <span class="text-sm font-medium">Recipe by Chef Giwa</span>
+                        <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+                    </div>
+                </div>
+                <div class="card shover:shadow-lg">
+                 <img src="./img/noodles.jpg" alt="food" class="w-full">
+                 <div class="text">
+                     <span> Sauced Curry Delicacy </span>
+                     <span class="text-sm font-medium">Recipe by Sazzy</span>
+                     <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+                 </div>
+               </div>
+                <div class="card hover:shadow-2xl">
+                    <img src="./img/stew.jpg" alt="food"class="w-full" >
+                    <div class="text">
+                        <span> Sauced Curry Delicacy </span>
+                        <span class="text-sm font-medium">Recipe by John</span>
+                        <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+                    </div>
+                </div>
+                <div class="card hover:shadow-2xl">
+                    <img src="./img/stew.jpg" alt="food"class="w-full" >
+                    <div class="text">
+                        <span> Sauced Curry Delicacy </span>
+                        <span class="text-sm font-medium">Recipe by Jesus</span>
+                        <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+                    </div>
+                </div>
+                <div class="card hover:shadow-2xl">
+                    <img src="./img/stew.jpg" alt="food"class="w-full" >
+                    <div class="text">
+                        <span> Sauced Curry Delicacy </span>
+                        <span class="text-sm font-medium">ORecipe by Sazzy</span>
+                        <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+                    </div>
+                </div>
+                <div class="card hover:shadow-lg">
+                    <img src="./img/stew.jpg" alt="food"class="w-full" >
+                    <div class="text">
+                        <span> Sauced Curry Delicacy </span>
+                        <span class="text-sm font-medium">Recipe by ChefChi</span>
+                        <div class="absolute py-1 px-2 rounded full w text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>Time taken </div>
+                    </div>
+                </div>
+                <div class="card shover:shadow-lg">
+                    <img src="./img/noodles.jpg" alt="food" class="w-full">
+                    <div class="text">
+                        <span> Sauced Curry Delicacy </span>
+                        <span class="text-sm font-medium">  Recipe by ChefChi</span>
+                        <div class="absolute py-1 px-2 rounded full bg-teal-300 text-black"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg></div>
+                    </div>
+                </div>
+           </div>
+           <div>
+            </div>
+          </div>
+          <div class=" flex justify-center block mb-2 shadow-gray-500  text-lg font-semibold" >
+            <span class="form">Load More</span>
+          </div>
+          
+        </main>
+    </div>
+  
+    <script src="./script.js"></script>   
+</body>
+</html>
